@@ -7,16 +7,31 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Diretórios e arquivos de editor
+.vscode/*                  # Ignorar toda a pasta .vscode, exceto extensions.json
+!.vscode/extensions.json   # Manter extensions.json do VSCode
+.idea                      # Para quem usa JetBrains (WebStorm, por exemplo)
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
+# Ignorar arquivos do sistema operacional
+.DS_Store                  # Arquivo do macOS
+Thumbs.db                  # Arquivo do Windows
+
+# Ignorar dependências do projeto (node_modules)
+node_modules/
+
+# Ignorar pasta de build gerada pelo Vite
+dist/
+dist-ssr/
+
+# Ignorar arquivos de cache de pacotes
+*.local                    # Arquivos locais de configuração do pacote
+npm-debug.log*              # Arquivos de log do npm
+yarn-debug.log*             # Arquivos de log do Yarn
+yarn-error.log*             # Arquivos de erro do Yarn
+pnpm-debug.log*             # Arquivos de log do PNPM
+lerna-debug.log*            # Arquivos de log do Lerna
+
+# Ignorar arquivos temporários de IDE e sistema
 *.suo
 *.ntvs*
 *.njsproj
